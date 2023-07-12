@@ -6,11 +6,11 @@ import {combineReducers} from '../../libraries';
  * ==================================================================
  */
 import auth from './auth/reducer';
-import user from './user/reducer';
+import contact from './contact/reducer';
 
 export const reducer = combineReducers({
   auth,
-  user,
+  contact,
 });
 
 /**
@@ -18,7 +18,7 @@ export const reducer = combineReducers({
  * ACTION / DISPATCHER
  * ==================================================================
  */
-export * from './user/action';
+export * from './contact/action';
 export * from './auth/action';
 
 /**
@@ -26,11 +26,11 @@ export * from './auth/action';
  * SERVICE
  * ==================================================================
  */
-export * from './user/service';
+export * from './contact/service';
 /**
  * ==================================================================
  * DATA TYPE
  * ==================================================================
  */
-export * from './user/type';
+export * from './contact/type';
 export * from './auth/type';

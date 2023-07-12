@@ -30,6 +30,6 @@ const App = () => {
 /**
  * This needs to match what's found in your app_delegate.m and MainActivity.java.
  */
-// const APP_NAME = 'Exhoje';
+// const APP_NAME = 'contak';
 
 AppRegistry.registerComponent(appName, () => App);

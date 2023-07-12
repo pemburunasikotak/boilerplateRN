@@ -15,10 +15,11 @@ const persistConfig = {
   whitelist: [
     // add some reducers here to make it permanent
     'auth',
+    'contact'
   ],
 };
 
-const middleware = applyMiddleware(thunk, logger);
+const middleware = applyMiddleware(thunk);
 const persistedReducer = persistReducer(persistConfig, reducer);
 
 export const store = createStore(persistedReducer, middleware);

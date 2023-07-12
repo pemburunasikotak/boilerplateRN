@@ -1,4 +1,4 @@
-package com.exhoje;
+package com.contak;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

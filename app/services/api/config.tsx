@@ -87,10 +87,10 @@ class ApiRequest {
 
     // setup base headers
     const baseHeaders = {
-      Version: DeviceInfo.getBuildNumber(),
-      Platform: Platform.OS,
-      Timestamp: `${Date.now()}`,
-      Authorization: `Bearer ${accessToken}`,
+      // Version: DeviceInfo.getBuildNumber(),
+      // Platform: Platform.OS,
+      // Timestamp: `${Date.now()}`,
+      // Authorization: `Bearer ${accessToken}`,
     };
 
     const requestConfig: RequestConfig = {
@@ -110,11 +110,13 @@ class ApiRequest {
     }
 
     try {
+      // console.log("🚀 ~ file: config.tsx:114 ~ ApiRequest ~ request ~ requestConfig:", requestConfig)
       const res = await apiInstance.request(requestConfig);
+      // console.log("🚀 ~ file: config.tsx:115 ~ ApiRequest ~ request ~ res:", res)
       await this.resolveResponse(res.data);
       return Promise.resolve(res.data);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       this.resolveResponse(err);
       return Promise.reject(err);
     }
